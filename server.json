@@ -1,7 +1,7 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/facebook_ads",
-  "title": "faceuook_ads",
+  "title": "Facebook_ads",
   "description": "Facebook Ads MCP Pack",
   "version": "0.1.0",
   "websiteUrl": "https://pipeworx.io/packs/facebook_ads",
