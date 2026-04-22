@@ -2,21 +2,21 @@
 
 Facebook Ads MCP Pack
 
-Part of the [Pipeworx](https://pipeworx.io) open MCP gateway.
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `fb_list_ad_accounts` | List all ad accounts accessible by the authenticated Facebook user. |
-| `fb_list_campaigns` | List campaigns for a Facebook ad account. |
-| `fb_get_campaign` | Get details for a specific Facebook Ads campaign. |
-| `fb_campaign_insights` | Get performance insights (impressions, clicks, spend, etc.) for a campaign. |
-| `fb_list_adsets` | List ad sets for a specific campaign. |
+| `fb_list_ad_accounts` | List all Facebook ad accounts you have access to. Returns account IDs, names, and status. |
+| `fb_list_campaigns` | List campaigns in a Facebook ad account (e.g., account_id: \'123456789\'). Returns campaign names, IDs, status, and objectives. |
+| `fb_get_campaign` | Get detailed campaign info: name, budget, status, schedule, and targeting. Requires account_id and campaign_id. |
+| `fb_campaign_insights` | Get campaign performance metrics: impressions, clicks, spend, CTR, CPC, conversions, ROAS. Requires account_id and campaign_id. |
+| `fb_list_adsets` | List ad sets in a campaign (e.g., account_id: \'123456789\', campaign_id: \'987654321\'). Returns names, IDs, status, budgets, and targeting. |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
@@ -28,11 +28,32 @@ Add to your MCP client config:
 }
 ```
 
-Or use the CLI:
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx pipeworx use facebook_ads
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Facebook_ads data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
