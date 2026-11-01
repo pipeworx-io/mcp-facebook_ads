@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-facebook_ads",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Facebook Ads MCP Pack",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "facebook_ads",
     "gatewaySlug": "facebook_ads",
-    "sourceHash": "v1-1a345085c6d09f212113398ad9349d5d60c79364e5339c758bb7138d6129f0e0",
-    "sourceCommit": "bb047243cf27f32453103de186b8e6a8b6a1ce79"
+    "sourceHash": "v1-b311d1039e0462600d2edf9e46078da38497e354803d1eb080a9c157a3eb2817",
+    "sourceCommit": "d35e32c1ffe988e24d391dedb35666387fd2b3d6"
   }
 }
